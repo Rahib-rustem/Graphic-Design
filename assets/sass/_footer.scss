@@ -1,0 +1,45 @@
+
+
+footer{
+    margin-top: 120px;
+    width:100%;
+    height: auto;
+    text-align: center;
+    .footerInfo{
+        color: #5b5881;
+       font-size: 17px;
+        span{
+            transition: color .3s linear!important;
+        &:hover{
+            color:#EE7B93;
+            cursor: pointer;
+        }
+        }
+      
+
+    }
+    .social{
+        font-size: 20px;
+        letter-spacing: 9px;
+        list-style: none;
+       
+                a{
+                    transition: color .2s linear!important;
+                    color: #5b5881;
+                    &:hover{
+                        color:#EE7B93;
+                    }
+                }
+    }
+}
+
+
+
+@media screen and (max-width: 1020px)  { 
+
+    footer{
+        margin-top: 660px;
+    }
+
+
+}
