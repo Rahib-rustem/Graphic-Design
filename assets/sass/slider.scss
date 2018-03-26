@@ -361,6 +361,9 @@
  
   height: 375px;
   margin-left: 5px;
+      .hiddenNexButton{
+        display: none;
+      }
 }
 
     
@@ -375,213 +378,239 @@
 }
 
 
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> main slider
-@media screen  and (min-width: 1268px) {
 
-#mainCarousel{
-  left: 0px;
-position: absolute;
+.wrapper {
+ 
   width: 100%;
-  overflow: hidden;
-  min-height: 250px;
-  // position: relative;
-  
- 
-}
-#mainItems{
-  position: relative;
-  list-style: none;
-  list-style-type: none;
-  margin: 0;
-  min-height: 150px;
-  padding: 0;
- 
-}
-
-.mainItem{
+position: absolute;
+@media screen  and (min-width: 1268px) {
+.list_carousel {
+  width: 100%;
+  background: #221C5A;
   position: absolute;
-  min-height: 200px;
- /* width: 250px;*/
-  float: left;
-  margin-right: 1px;
-  background: #f2f2f2;
-  text-align: center;
-  line-height: 180px;
-    background-color: #221C5A;
-      .icon{
-       width: 150px;
-       height: 150px;
-        background-color: #221C5A;
-      }
+  left: -50px
 }
-
-.btnPrevious{
-position: relative;
-top: 290px;
-left: 520px;
-z-index: 999;
-cursor: pointer;
-width: 20px;
-height: 20px;
-border: 2px solid white;
-border-radius: 50%;
 }
-
-.btnNext{
-position: relative;
-left:560px;
-top: 270px;
-z-index: 999;
-cursor: pointer;
-width: 20px;
-height: 20px;
-border: 2px solid white;
-border-radius: 50%;
-}
-
-
-}
-
-
-
-
-
-@media screen   and (max-width: 1268px)  and (min-width: 1020px){
-
-  #mainCarousel{
-    left: 0px;
-  position: absolute;
+@media screen  and (max-width: 1268px) and (min-width: 1020px){
+  .list_carousel {
     width: 100%;
-    overflow: hidden;
-    min-height: 250px;
-    // position: relative;
-    
-   
-  }
-  #mainItems{
-    position: relative;
-    list-style: none;
-    list-style-type: none;
-    margin: 0;
-    min-height: 150px;
-    padding: 0;
-   
-  }
-  
-  .mainItem{
+    background: #221C5A;
     position: absolute;
-    min-height: 200px;
-   /* width: 250px;*/
-    float: left;
-    margin-right: 1px;
-    background: #f2f2f2;
-    text-align: center;
-    // line-height: 180px;
-      background-color: #221C5A;
-        .icon{
-         width: 150px;
-         height: 150px;
-          background-color: #221C5A;
-        }
+    left: -140px
   }
-  
-  .btnPrevious{
-  position: relative;
-  top: 290px;
-  left: 430px;
-  z-index: 999;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  border: 2px solid white;
-  border-radius: 50%;
   }
-  
-  .btnNext{
-  position: relative;
-  left:470px;
-  top: 270px;
-  z-index: 999;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  border: 2px solid white;
-  border-radius: 50%;
-  }
-  
-  
-  }
-  
-
-
-
-  @media screen   and (max-width: 1020px)  and (min-width: 650px){
-
-    #mainCarousel{
-      left: 0px;
-    position: absolute;
+  @media screen  and (max-width: 1020px) and (min-width: 750px){
+    .list_carousel {
       width: 100%;
-      overflow: hidden;
-      min-height: 250px;
-      // position: relative;
-      
-     
-    }
-    #mainItems{
-      position: relative;
-      list-style: none;
-      list-style-type: none;
-      margin: 0;
-      min-height: 150px;
-      padding: 0;
-     
-    }
-    
-    .mainItem{
+      background: #221C5A;
       position: absolute;
-      min-height: 200px;
-     /* width: 250px;*/
+      left: 70px;
+     
+    }
+    }
+    @media screen  and (max-width: 750px) and (min-width: 500px){
+      .list_carousel {
+        width: 100%;
+        background: #221C5A;
+        position: absolute;
+        left: -70px;
+       
+      }
+      }
+      
+
+.caroufredsel_wrapper{
+  width: 100%!important;
+  overflow: visible!important;
+}
+
+.list_carousel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+@media screen  and (min-width: 1268px) {
+.list_carousel li {
+  width: 200px;
+  height: 180px;
+  display: block;
+  float: left;
+  margin: 60px;
+  .img{
+    width: 170px;
+    height: 150px;
+   
+  }
+}
+}
+
+@media screen  and (max-width: 1268px)  and (min-width: 1020px) {
+  .list_carousel li {
+    width: 200px;
+    height: 180px;
+    display: block;
+    float: left;
+    margin: 60px;
+    .img{
+      width: 170px;
+      height: 150px;
+     
+    }
+  }
+  }
+  @media screen  and (max-width: 1140px)  {
+    .list_carousel li {
+      width: 200px;
+      height: 180px;
+      display: block;
       float: left;
-      margin-right: 1px;
-      background: #f2f2f2;
-      text-align: center;
-      // line-height: 180px;
-        background-color: #221C5A;
-          .icon{
-           width: 150px;
-           height: 150px;
-            background-color: #221C5A;
-          }
+      margin: 110px!important;
+     
+      .img{
+        width: 170px;
+        height: 150px;
+     
+      }
     }
-    
-    .btnPrevious{
-    position: relative;
-    top: 290px;
-    left: 430px;
-    z-index: 999;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border: 2px solid white;
-    border-radius: 50%;
     }
-    
-    .btnNext{
-    position: relative;
-    left:470px;
-    top: 270px;
-    z-index: 999;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border: 2px solid white;
-    border-radius: 50%;
+    @media screen  and (max-width: 650px)  {
+      .list_carousel li {
+        width: 200px;
+        height: 180px;
+        display: block;
+        float: left;
+        // margin: 170px!important;
+       
+        .img{
+          width: 170px;
+          height: 150px;
+       
+        }
+      }
+      }
+.pager a {
+  margin: 0 7px;
+  text-decoration: none;
+  border: 3px solid white;
+  border-radius: 50%;
+  color: white;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #221C5A;
+
+}
+@media screen  and (max-width: 1040px) {
+  .pager a{
+    display: none;
+  }
+}
+.pager a:focus:last-child {
+       background: white;
+       color: white;
+}
+.pager a:focus:first-child {
+       background: white;
+       color: white;
+}
+.pager a:focus:nth-child(2) {
+  background: white;
+  color: white;
+}
+
+.pager a:focus:nth-child(3) {
+  background: white;
+  color: white;
+}
+
+.sliderControl{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: relative;
+  top:  -40px;
+  
+  .next {
+    color: white;
+    background: #221C5A;
+    border: none;
+    outline: none;
+    font-size: 50px;
+    float: left;
+   
+  }
+  @media screen  and (min-width: 1020px) {
+    .next{
+      display: none!important;
     }
-    
-    
+   
+  }
+  @media screen  and (max-width: 1020px) {
+    .next{
+      display: block!important;
+      position: relative;
+      left: 100px;
+     
     }
-    
+   
+  }
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -9,6 +9,8 @@ $(window).resize(function(){
 });
         
 
+
+
   onResize = function() {
 
     if($(window).width() > 1020) {
@@ -40,7 +42,8 @@ $(window).resize(function(){
             if ($(window).scrollTop() > 1320)
             box.css({
               'position': 'relative', 'top': '505px'   });
-             
+                
+
         }
         $(window).scroll(fixDiv);
         fixDiv();
@@ -961,8 +964,6 @@ message.blur(function() {
     });
   
     
-  
-
 
     $(".headerHome").click(function() {
       $("html, body").animate({ scrollTop:  100 }, "slow");
@@ -971,7 +972,7 @@ message.blur(function() {
 
 
       $(".headerService").click(function() {
-        $("html, body").animate({ scrollTop: 805 }, "slow");
+        $("html, body").animate({ scrollTop: 808 }, "slow");
         return false;
    });
    $(".headerPortfolio").click(function() {
@@ -1002,74 +1003,83 @@ $(".headerContact").click(function() {
 
 
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> main slider
 
 
 
-$(function(){
-  var windowWidth = $( window ).width();
-  var mainItems = $('#mainItems');
-  var mainItem = $('.mainItem');
-  var mainItemsChild = mainItems.find('.mainItem');
-  var clickCount = 0;
-  var canClick = true;
-  var mainItemWidth = $('.mainItem').width();
-  var divCount = 4;
-   
-if(windowWidth < 650){
-  divCount = 3;
-}
 
-  mainItem.width( windowWidth/divCount)
-  contentWidth = mainItems.find('.mainItem:first').width()+1; 
-   
-console.log(contentWidth)
-  mainItems.width(contentWidth*mainItemsChild.length);
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> main slider
 
 
-  refreshChildPosition();
+$(function() {
 
-  $('.btnNext').click(function(){
-      if(canClick){
-          canClick = false;
-          clickCount++;
+ 
+  $('#foo0').carouFredSel();
 
-         
-          mainItems.stop(false, true).animate({
-              left : '-='+contentWidth
-          },300, function(){
-            
-              lastmainItem = mainItems.find('.mainItem:first');
-              lastmainItem.remove().appendTo(mainItems);
-              lastmainItem.css('left', ((mainItemsChild.length-1)*(contentWidth))+(clickCount*contentWidth));
-              canClick = true;
-          });
-      }
+  
+  $('#foo1').carouFredSel({
+    auto: {
+      pauseOnHover: 'resume',
+      progress: '#timer1'
+    }
+  }, {
+    transition: true
   });
 
-  $('.btnPrevious').click(function(){
-      if(canClick){
-          canClick = false;
-          clickCount--;
-        
-          lastmainItem = mainItems.find('.mainItem:last');
-          lastmainItem.remove().prependTo(mainItems);
-
-          lastmainItem.css('left', contentWidth*clickCount);             
-         
-          mainItems.finish(true).animate({
-              left: '+='+contentWidth
-          },300, function(){
-              canClick = true;
-          });
-      }
+  
+  $('#foo2').carouFredSel({
+    auto: false,
+    prev: '#prev2',
+    next: '#next2',
+    pagination: "#pager2",
+    mousewheel: true,
+    swipe: {
+      onMouse: true,
+      onTouch: true
+    }
   });
 
-  function refreshChildPosition(){
-      mainItemsChild.each(function(){
-          $(this).css('left', contentWidth*mainItemsChild.index($(this)));
-      });
-  }
+  
+  $('#foo3').carouFredSel({
+    width: 360,
+    height: 'auto',
+    prev: '#prev3',
+    next: '#next3',
+    auto: false
+  });
+
+  
+  $('#foo4').carouFredSel({
+    responsive: true,
+    width: '100%',
+    scroll: 2,
+    items: {
+      width: 400,
+    
+      visible: {
+        min: 2,
+        max: 3
+      }
+    }
+  });
+
+  
+  $('#foo5').carouFredSel({
+    width: '100%',
+    scroll: 2
+  });
+
 });
+
+
+
+
+
+
+
+
+
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 

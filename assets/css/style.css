@@ -75,13 +75,10 @@
       position: relative; }
   .block .slider-content {
     float: right !important;
-    background: red;
+    background: white;
     width: 780px;
     height: 505px;
     margin-left: 0px; }
-
-.maxWidth {
-  width: auto; }
 
 @media screen and (min-width: 1268px) {
   .box {
@@ -109,7 +106,63 @@
     margin-top: 369.5px;
     margin-right: 16px;
     max-width: 804px;
-    height: 505px; } }
+    height: 505px; }
+    .slider-content .content-wrapper {
+      padding: 0 30px;
+      padding-top: 60px !important; }
+      .slider-content .content-wrapper .image-slider-wrapper {
+        position: relative; }
+        .slider-content .content-wrapper .image-slider-wrapper #slider1_next {
+          width: 50px;
+          height: 50px;
+          z-index: 2;
+          position: absolute;
+          top: -150px !important; }
+        .slider-content .content-wrapper .image-slider-wrapper .caroufredsel_wrapper {
+          display: block;
+          text-align: start;
+          float: none;
+          position: relative;
+          top: auto;
+          right: auto;
+          bottom: auto;
+          left: auto;
+          z-index: auto;
+          width: 680px;
+          height: 390px;
+          margin: 0px;
+          overflow: hidden;
+          cursor: move; }
+          .slider-content .content-wrapper .image-slider-wrapper .caroufredsel_wrapper #slider1 {
+            list-style: none;
+            text-align: left;
+            float: none;
+            position: absolute;
+            top: 0px;
+            right: auto;
+            bottom: auto;
+            left: 0px;
+            margin: 0px;
+            width: 3400px;
+            height: 390px; }
+            .slider-content .content-wrapper .image-slider-wrapper .caroufredsel_wrapper #slider1 .service-holder {
+              display: inline-block;
+              width: 335px; }
+              .slider-content .content-wrapper .image-slider-wrapper .caroufredsel_wrapper #slider1 .service-holder img {
+                display: inline-block;
+                width: 50px !important;
+                vertical-align: top; }
+              .slider-content .content-wrapper .image-slider-wrapper .caroufredsel_wrapper #slider1 .service-holder .service-content-holder {
+                display: inline-block;
+                width: 240px;
+                margin-top: 55px;
+                margin-left: 5px; }
+                .slider-content .content-wrapper .image-slider-wrapper .caroufredsel_wrapper #slider1 .service-holder .service-content-holder .service-title {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 24px;
+                  padding-bottom: 10px; }
+                .slider-content .content-wrapper .image-slider-wrapper .caroufredsel_wrapper #slider1 .service-holder .service-content-holder .service-content {
+                  font-size: 17px; } }
 @media screen and (max-width: 1268px) and (min-width: 1020px) {
   .box {
     width: 248px;
@@ -171,22 +224,13 @@
     width: 100%;
     padding: 0px;
     margin: 0px;
-    display: block; }
-
-  .maxWidth {
-    margin: 0px !important;
-    padding: 0px !important;
-    width: 100% !important; } }
+    display: block; } }
 @media screen and (max-width: 620px) {
   .block {
     margin-top: 220px !important; } }
 @media screen and (max-width: 1268px) and (min-width: 1199px) {
   .maxWidth {
     max-width: 970px !important; } }
-.container {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important; }
-
 .sector2 {
   background-color: #221C5A;
   background-image: url("../img/background_img_02.jpg");
@@ -837,6 +881,9 @@
 .backColor {
   height: 60px;
   transition-duration: 0.3s; }
+
+body {
+  overflow-x: hidden; }
 
 #main {
   background-color: #221c5a;
@@ -2960,166 +3007,136 @@
   width: 98.3%;
   height: 375px;
   margin-left: 5px; }
+  .bxSlider .hiddenNexButton {
+    display: none; }
 
 @media screen and (max-width: 1020px) {
   .bxSlider {
     margin-top: 270px;
     width: 100%;
     height: 576px; } }
-@media screen and (min-width: 1268px) {
-  #mainCarousel {
-    left: 0px;
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    min-height: 250px; }
-
-  #mainItems {
-    position: relative;
-    list-style: none;
-    list-style-type: none;
+.wrapper {
+  width: 100%;
+  position: absolute; }
+  @media screen and (min-width: 1268px) {
+    .wrapper .list_carousel {
+      width: 100%;
+      background: #221C5A;
+      position: absolute;
+      left: -50px; } }
+  @media screen and (max-width: 1268px) and (min-width: 1020px) {
+    .wrapper .list_carousel {
+      width: 100%;
+      background: #221C5A;
+      position: absolute;
+      left: -140px; } }
+  @media screen and (max-width: 1020px) and (min-width: 750px) {
+    .wrapper .list_carousel {
+      width: 100%;
+      background: #221C5A;
+      position: absolute;
+      left: 70px; } }
+  @media screen and (max-width: 750px) and (min-width: 500px) {
+    .wrapper .list_carousel {
+      width: 100%;
+      background: #221C5A;
+      position: absolute;
+      left: -70px; } }
+  .wrapper .caroufredsel_wrapper {
+    width: 100% !important;
+    overflow: visible !important; }
+  .wrapper .list_carousel ul {
     margin: 0;
-    min-height: 150px;
-    padding: 0; }
-
-  .mainItem {
-    position: absolute;
-    min-height: 200px;
-    /* width: 250px;*/
-    float: left;
-    margin-right: 1px;
-    background: #f2f2f2;
-    text-align: center;
-    line-height: 180px;
-    background-color: #221C5A; }
-    .mainItem .icon {
-      width: 150px;
-      height: 150px;
-      background-color: #221C5A; }
-
-  .btnPrevious {
-    position: relative;
-    top: 290px;
-    left: 520px;
-    z-index: 999;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border: 2px solid white;
-    border-radius: 50%; }
-
-  .btnNext {
-    position: relative;
-    left: 560px;
-    top: 270px;
-    z-index: 999;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border: 2px solid white;
-    border-radius: 50%; } }
-@media screen and (max-width: 1268px) and (min-width: 1020px) {
-  #mainCarousel {
-    left: 0px;
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    min-height: 250px; }
-
-  #mainItems {
-    position: relative;
+    padding: 0;
     list-style: none;
-    list-style-type: none;
-    margin: 0;
-    min-height: 150px;
-    padding: 0; }
-
-  .mainItem {
-    position: absolute;
-    min-height: 200px;
-    /* width: 250px;*/
-    float: left;
-    margin-right: 1px;
-    background: #f2f2f2;
-    text-align: center;
-    background-color: #221C5A; }
-    .mainItem .icon {
-      width: 150px;
-      height: 150px;
-      background-color: #221C5A; }
-
-  .btnPrevious {
-    position: relative;
-    top: 290px;
-    left: 430px;
-    z-index: 999;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border: 2px solid white;
-    border-radius: 50%; }
-
-  .btnNext {
-    position: relative;
-    left: 470px;
-    top: 270px;
-    z-index: 999;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border: 2px solid white;
-    border-radius: 50%; } }
-@media screen and (max-width: 1020px) and (min-width: 650px) {
-  #mainCarousel {
-    left: 0px;
-    position: absolute;
+    display: block; }
+  @media screen and (min-width: 1268px) {
+    .wrapper .list_carousel li {
+      width: 200px;
+      height: 180px;
+      display: block;
+      float: left;
+      margin: 60px; }
+      .wrapper .list_carousel li .img {
+        width: 170px;
+        height: 150px; } }
+  @media screen and (max-width: 1268px) and (min-width: 1020px) {
+    .wrapper .list_carousel li {
+      width: 200px;
+      height: 180px;
+      display: block;
+      float: left;
+      margin: 60px; }
+      .wrapper .list_carousel li .img {
+        width: 170px;
+        height: 150px; } }
+  @media screen and (max-width: 1140px) {
+    .wrapper .list_carousel li {
+      width: 200px;
+      height: 180px;
+      display: block;
+      float: left;
+      margin: 110px !important; }
+      .wrapper .list_carousel li .img {
+        width: 170px;
+        height: 150px; } }
+  @media screen and (max-width: 650px) {
+    .wrapper .list_carousel li {
+      width: 200px;
+      height: 180px;
+      display: block;
+      float: left; }
+      .wrapper .list_carousel li .img {
+        width: 170px;
+        height: 150px; } }
+  .wrapper .pager a {
+    margin: 0 7px;
+    text-decoration: none;
+    border: 3px solid white;
+    border-radius: 50%;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #221C5A; }
+  @media screen and (max-width: 1040px) {
+    .wrapper .pager a {
+      display: none; } }
+  .wrapper .pager a:focus:last-child {
+    background: white;
+    color: white; }
+  .wrapper .pager a:focus:first-child {
+    background: white;
+    color: white; }
+  .wrapper .pager a:focus:nth-child(2) {
+    background: white;
+    color: white; }
+  .wrapper .pager a:focus:nth-child(3) {
+    background: white;
+    color: white; }
+  .wrapper .sliderControl {
     width: 100%;
-    overflow: hidden;
-    min-height: 250px; }
-
-  #mainItems {
-    position: relative;
-    list-style: none;
-    list-style-type: none;
-    margin: 0;
-    min-height: 150px;
-    padding: 0; }
-
-  .mainItem {
-    position: absolute;
-    min-height: 200px;
-    /* width: 250px;*/
-    float: left;
-    margin-right: 1px;
-    background: #f2f2f2;
+    height: auto;
     text-align: center;
-    background-color: #221C5A; }
-    .mainItem .icon {
-      width: 150px;
-      height: 150px;
-      background-color: #221C5A; }
-
-  .btnPrevious {
     position: relative;
-    top: 290px;
-    left: 430px;
-    z-index: 999;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border: 2px solid white;
-    border-radius: 50%; }
+    top: -40px; }
+    .wrapper .sliderControl .next {
+      color: white;
+      background: #221C5A;
+      border: none;
+      outline: none;
+      font-size: 50px;
+      float: left; }
+    @media screen and (min-width: 1020px) {
+      .wrapper .sliderControl .next {
+        display: none !important; } }
+    @media screen and (max-width: 1020px) {
+      .wrapper .sliderControl .next {
+        display: block !important;
+        position: relative;
+        left: 100px; } }
 
-  .btnNext {
-    position: relative;
-    left: 470px;
-    top: 270px;
-    z-index: 999;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border: 2px solid white;
-    border-radius: 50%; } }
 footer {
   margin-top: 120px;
   width: 100%;
